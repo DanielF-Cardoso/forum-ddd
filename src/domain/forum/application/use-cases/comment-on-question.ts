@@ -3,7 +3,7 @@ import { QuestionComment } from '../../enterprise/entities/question-comment'
 import { QuestionCommentsRepository } from '../repositories/question-comments-repository'
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { Either, left, right } from '@/core/either'
-import { ResourceNotFoundError } from './errors/resource-not-found-errors'
+import { ResourceNotFoundError } from '@/core/errors/errors/resource-not-found-errors'
 
 interface CommentOnQuestionUseCaseRequest {
   authorId: string
@@ -22,7 +22,7 @@ export class CommentOnQuestionUseCase {
   constructor(
     private questionsRepository: QuestionsRepository,
     private questionCommentsRepository: QuestionCommentsRepository,
-  ) {}
+  ) { }
 
   async execute({
     authorId,
