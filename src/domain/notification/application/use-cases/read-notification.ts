@@ -3,6 +3,7 @@ import { Notification } from '../../enterprise/entities/notification'
 import { NotificationRepository } from '../repositories/notifications-repository'
 import { ResourceNotFoundError } from '@/core/errors/errors/resource-not-found-errors'
 import { NotAllowedError } from '@/core/errors/errors/not-allowed-error'
+import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 
 interface ReadNotificationUseCaseRequest {
   recipientId: string
